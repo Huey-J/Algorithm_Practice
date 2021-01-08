@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\6. 함수">
       <UniqueIdentifier>{3a80a2bf-7114-48b9-976f-bcd0a9ef5d35}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\7. 문자열">
+      <UniqueIdentifier>{1b47cda3-7af9-481f-a30c-8963b6990134}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="10869 사칙연산.c">
@@ -89,6 +92,18 @@
     </ClCompile>
     <ClCompile Include="4673 셀프넘버.c">
       <Filter>소스 파일\6. 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="1065 한수.c">
+      <Filter>소스 파일\6. 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="10809 알파벳 찾기.c">
+      <Filter>소스 파일\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="1157 단어공부.c">
+      <Filter>소스 파일\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="2908 상수.c">
+      <Filter>소스 파일\7. 문자열</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
