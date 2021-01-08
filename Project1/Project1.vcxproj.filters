@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\1. 입출력과 사칙연산">
+      <UniqueIdentifier>{09c384e8-6940-47ae-bd33-294c3dde2d29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\2. if문">
+      <UniqueIdentifier>{e1ed1cfb-0e81-4ea8-a1f6-67d84a4bde75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\3. for문">
+      <UniqueIdentifier>{180dbf68-82ee-4554-88a4-e7de7a046a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\4. while문">
+      <UniqueIdentifier>{a34e57da-58c7-4f6f-aad7-e9c697ff2311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\5. 1차원배열">
+      <UniqueIdentifier>{9f321eff-26c1-4a46-8892-c19a494bd1ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\6. 함수">
+      <UniqueIdentifier>{3a80a2bf-7114-48b9-976f-bcd0a9ef5d35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="10869 사칙연산.c">
+      <Filter>소스 파일\1. 입출력과 사칙연산</Filter>
+    </ClCompile>
+    <ClCompile Include="2588 곱셈.c">
+      <Filter>소스 파일\1. 입출력과 사칙연산</Filter>
+    </ClCompile>
+    <ClCompile Include="2753 윤년.c">
+      <Filter>소스 파일\2. if문</Filter>
+    </ClCompile>
+    <ClCompile Include="14681 사분면 고르기.c">
+      <Filter>소스 파일\2. if문</Filter>
+    </ClCompile>
+    <ClCompile Include="2884 알람시계.c">
+      <Filter>소스 파일\2. if문</Filter>
+    </ClCompile>
+    <ClCompile Include="8393 합.c">
+      <Filter>소스 파일\3. for문</Filter>
+    </ClCompile>
+    <ClCompile Include="11022 A+B-8.c">
+      <Filter>소스 파일\3. for문</Filter>
+    </ClCompile>
+    <ClCompile Include="2438 별찍기-1.c">
+      <Filter>소스 파일\3. for문</Filter>
+    </ClCompile>
+    <ClCompile Include="2439 별찍기-2.c">
+      <Filter>소스 파일\3. for문</Filter>
+    </ClCompile>
+    <ClCompile Include="10871 X보다 작은수.c">
+      <Filter>소스 파일\3. for문</Filter>
+    </ClCompile>
+    <ClCompile Include="1110 더하기 사이클.c">
+      <Filter>소스 파일\4. while문</Filter>
+    </ClCompile>
+    <ClCompile Include="10818 최소 최대.c">
+      <Filter>소스 파일\5. 1차원배열</Filter>
+    </ClCompile>
+    <ClCompile Include="2577 숫자의 개수.c">
+      <Filter>소스 파일\5. 1차원배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1546 평균.c">
+      <Filter>소스 파일\5. 1차원배열</Filter>
+    </ClCompile>
+    <ClCompile Include="8958 OX퀴즈.c">
+      <Filter>소스 파일\5. 1차원배열</Filter>
+    </ClCompile>
+    <ClCompile Include="8958 OX퀴즈 모범.c">
+      <Filter>소스 파일\5. 1차원배열</Filter>
+    </ClCompile>
+    <ClCompile Include="4344  평균은 넘겠지.c">
+      <Filter>소스 파일\5. 1차원배열</Filter>
+    </ClCompile>
+    <ClCompile Include="15596 정수N개의 합.c">
+      <Filter>소스 파일\6. 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="4673 셀프넘버.c">
+      <Filter>소스 파일\6. 함수</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
