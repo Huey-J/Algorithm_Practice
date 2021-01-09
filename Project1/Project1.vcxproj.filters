@@ -105,5 +105,11 @@
     <ClCompile Include="2908 상수.c">
       <Filter>소스 파일\7. 문자열</Filter>
     </ClCompile>
+    <ClCompile Include="5622 다이얼.c">
+      <Filter>소스 파일\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="1316 그룹단어체커.c">
+      <Filter>소스 파일\7. 문자열</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
