@@ -15,7 +15,6 @@ int getNumber(int a, int b) {
 	}
 }
 
-
 int main() {
 	int T, result;
 	int i;

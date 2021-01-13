@@ -132,5 +132,14 @@
     <ClCompile Include="2775 부녀회장이 될테야.c">
       <Filter>소스 파일\8. 기본수학1</Filter>
     </ClCompile>
+    <ClCompile Include="2839 설탕배달.c">
+      <Filter>소스 파일\8. 기본수학1</Filter>
+    </ClCompile>
+    <ClCompile Include="10757 큰수A+B.c">
+      <Filter>소스 파일\8. 기본수학1</Filter>
+    </ClCompile>
+    <ClCompile Include="1011 fly me to the alpha centauri.c">
+      <Filter>소스 파일\8. 기본수학1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
