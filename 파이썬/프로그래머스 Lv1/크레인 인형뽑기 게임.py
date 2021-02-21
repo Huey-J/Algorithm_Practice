@@ -3,7 +3,6 @@ moves = [1, 5, 3, 5, 1, 2, 1, 4]
 
 answer = 0  # 사라진 인형의 개수
 bucket = []  # 바구니
-
 for temp in moves:
     for i in range(len(board)):
         if board[i][temp - 1] != 0:
@@ -13,13 +12,11 @@ for temp in moves:
                     bucket.pop()
                     bucket.pop()
                     answer += 2
-
             board[i][temp - 1] = 0  # 인형 비우기
             break
 print(answer)
 
-
-
+#### 내 답안
 # def solution(board, moves):
 #     answer = 0  # 사라진 인형의 개수
 #     bucket = []  # 바구니
