@@ -1,2 +1,21 @@
-[LV1]
-이름이 없는 동물의 아이디
+[Lv1]
+이름이 없는 동물의 아이디 (IS NULL)
+SELECT animal_id FROM animal_ins
+WHERE name IS NULL
+ORDER BY animal_id
+
+
+[Lv1]
+이름이 있는 동물의 아이디 (IS NOT NULL)
+SELECT animal_id FROM animal_ins
+WHERE name IS NOT NULL
+ORDER BY animal_id
+
+
+[Lv2]
+NULL 처리하기 (IFNULL)
+SELECT
+    animal_type,
+    IFNULL(NAME, "No name"),	# IFNULL(COLUMN, data): 만약 해당 행의 칼럼이 NULL이면 data를 대신 출력
+    sex_upon_intake
+FROM animal_ins
