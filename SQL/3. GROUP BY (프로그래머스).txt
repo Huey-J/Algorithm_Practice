@@ -1,0 +1,40 @@
+[LV2]
+고양이와 개는 몇 마리 있을까 (GROUP BY)
+SELECT ANIMAL_TYPE, COUNT(ANIMAL_ID)
+FROM ANIMAL_INS
+GROUP BY ANIMAL_TYPE
+ORDER BY ANIMAL_TYPE
+
+
+[LV2]
+동명 동물 수 찾기 (HAVING)
+( 이름이 없는 동물을 집계에서 제외 = COUNT(NAME) )
+SELECT NAME, COUNT(ANIMAL_ID)
+FROM ANIMAL_INS
+GROUP BY NAME
+HAVING COUNT(NAME) > 1		
+ORDER BY NAME
+
+
+[LV2]
+입양 시각 구하기1 (WHERE, HOUR)
+조건에 한해 그룹화
+SELECT HOUR(DATETIME), COUNT(ANIMAL_ID)
+FROM ANIMAL_OUTS
+WHERE HOUR(DATETIME) >= 9 AND HOUR(DATETIME) < 20
+GROUP BY HOUR(DATETIME)
+ORDER BY HOUR(DATETIME)
+
+
+[LV4]
+입양 시각 구하기2 (SET 변수)
+SET @hour := -1;				# 변수 선언
+SELECT 
+    @hour := @hour+1 AS HOUR,		# 시간이 하나씩 증가하면서
+    (
+        SELECT COUNT(*)			# COUNT한다
+        FROM animal_outs			# animal_outs 테이블에서
+        WHERE HOUR(datetime) = @hour	# HOUR(datetime) = @hour인 것들을
+    ) AS COUNT
+FROM animal_outs
+WHERE @hour<23				# 23까지
