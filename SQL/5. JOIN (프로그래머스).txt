@@ -1,0 +1,43 @@
+[Lv3]	https://it-jin-developer.tistory.com/40
+없어진 기록 찾기 (OUTER JOIN)
+outs에는 있는데 ins에 없는 데이터
+
+SELECT outs.animal_id, outs.name
+FROM animal_outs AS outs
+LEFT JOIN animal_ins AS ins		# 합집합 (OUTER JOIN)
+ON outs.animal_id = ins.animal_id 	# JOIN할 때의 기준
+WHERE ins.animal_id IS NULL	# 출력 조건
+ORDER BY outs.animal_id
+
+
+[Lv3]
+있었는데요 없었습니다 (INNER JOIN)
+SELECT ins.animal_id, ins.name
+FROM animal_ins AS ins
+JOIN animal_outs AS outs		# 교집합 (INNER JOIN)
+ON ins.animal_id = outs.animal_id	# JOIN할 때의 기준
+WHERE ins.datetime > outs.datetime	# 출력 조건
+ORDER BY ins.datetime
+
+
+[Lv3]
+오랜 기간 보호한 동물1 (OUTER JOIN)
+SELECT ins.name, ins.datetime
+FROM animal_ins AS ins
+LEFT JOIN animal_outs AS outs
+ON ins.animal_id = outs.animal_id
+WHERE outs.animal_id IS NULL	# out 테이블에는 없는 친구들 출력
+ORDER BY ins.datetime ASC LIMIT 3	# 가장 오래된 3마리
+
+
+[Lv4]
+보호소에서 중성화한 동물
+SELECT ins.animal_id, ins.animal_type, ins.name
+FROM animal_ins AS ins
+LEFT JOIN animal_outs AS outs
+ON ins.animal_id = outs.animal_id	# 외래키 기준으로 JOIN
+WHERE
+    ins.sex_upon_intake = 'Intact Male' AND outs.sex_upon_outcome = 'Neutered Male'
+    OR
+    ins.sex_upon_intake = 'Intact Female' AND outs.sex_upon_outcome = 'Spayed Female'
+ORDER BY ins.animal_id
