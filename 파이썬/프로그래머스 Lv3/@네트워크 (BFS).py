@@ -1,25 +1,3 @@
-# def solution(n, computers):
-#     networks = []
-#     for i in range(n):
-#         tmp = []
-#         for j in range(n):
-#             if computers[i][j] == 1:
-#                 tmp.append(j+1)
-#
-#         if len(networks) == 0:
-#             networks.append(tmp)
-#             continue
-#
-#         for i in range(len(networks)):
-#             for k in tmp:
-#                 if k in networks[i]:
-#                     networks[i] += tmp
-#                     networks[i] = list(set(networks[i]))
-#                 else:
-#                     networks.append(tmp)
-#
-#     return len(networks)
-
 def solution(n, computers):
     answer = 0
     bfs = []  # BFS를 위한 리스트(큐)
