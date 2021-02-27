@@ -1,3 +1,6 @@
-graph = dict()
+N, M = map(int, input().split())
 
-graph['A'] = ['B', 'C']
+array = []
+for _ in range(N):
+    array.append(list(map(int, input().split())))
+print(array)
