@@ -5,7 +5,7 @@ completion = ["josipa", "filipa", "marina", "nikola"]
 participant.sort()
 completion.sort()
 for i in range(len(completion)):
-    print(participant[i], completion[i])
+    # print(participant[i], completion[i])
     if participant[i] != completion[i]:
         print(participant[i])
         break
@@ -51,4 +51,4 @@ print(participant[-1])
 #
 # def solution(participant, completion):
 #     answer = collections.Counter(participant) - collections.Counter(completion)
-#     return list(answer.keys())[0]
+#     return list(answer)[0]
