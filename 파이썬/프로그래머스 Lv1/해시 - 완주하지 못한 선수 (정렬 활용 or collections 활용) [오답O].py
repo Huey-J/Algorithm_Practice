@@ -2,14 +2,14 @@ participant = ["marina", "josipa", "nikola", "vinko", "filipa"]
 completion = ["josipa", "filipa", "marina", "nikola"]
 
 #### 3. 정렬 이용
-participant.sort()
-completion.sort()
-for i in range(len(completion)):
-    # print(participant[i], completion[i])
-    if participant[i] != completion[i]:
-        print(participant[i])
-        break
-print(participant[-1])
+# participant.sort()
+# completion.sort()
+# for i in range(len(completion)):
+#     # print(participant[i], completion[i])
+#     if participant[i] != completion[i]:
+#         print(participant[i])
+#         break
+# print(participant[-1])
 
 #### 2. 버블정렬
 # participant.sort()
@@ -46,9 +46,10 @@ print(participant[-1])
 #     return(participant[-1])
 
 #### 모범 답안 (라이브러리 활용)
-# import collections
-#
-#
-# def solution(participant, completion):
-#     answer = collections.Counter(participant) - collections.Counter(completion)
-#     return list(answer)[0]
+from collections import Counter
+
+def solution(participant, completion):
+    answer = Counter(participant) - Counter(completion)
+    return list(answer)[0]
+
+print(solution(participant, completion))
