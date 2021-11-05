@@ -1,29 +1,26 @@
 def solution(priorities, location):
+    printer = []
+    for i in range(len(priorities)):
+        if i == location:
+            printer.append((priorities[i], True))       # location에 True 표시
+        else:
+            printer.append((priorities[i], False))
+
     answer = 0
     while True:
-        k = priorities[0]
-        for i in range(1, len(priorities)):
-            if k < priorities[i]:
-                priorities.append(priorities.pop(0))  # 뒤로 보내기
-                if location == 0:
-                    location = len(priorities) - 1
-                else:
-                    location -= 1
+        now = printer.pop(0)
+        # print(answer, now, printer)
+        for i in range(0, len(printer)):
+            if now[0] < printer[i][0]:      # 현재 보다 큰 값이 있으므로 뒤에 다시 추가
+                printer.append(now)
                 break
-        # print(priorities, location, answer)
-        if i == len(priorities) - 1:
-            if location == 0:
-                return answer + 1
-            priorities.pop(0)
-            location -= 1
+        else:                       # Break 되지 않았으므로 pop처리
             answer += 1
-        if len(priorities) == 1:
-            break
-
-    return answer + 1
+            if now[1]:              # True 표시 되어 있으면 반환
+                return answer
 
 
-print(solution([2, 1, 3, 2], 2))
+print(solution([2, 3, 2, 2], 0))
 
 
 #### 내 답안 (location 이동)

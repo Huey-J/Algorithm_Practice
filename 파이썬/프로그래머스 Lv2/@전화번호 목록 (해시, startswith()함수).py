@@ -1,42 +1,31 @@
-#### 내 답안 1
+# # 내 답안 : 시간 초과
 # def solution(phone_book):
-#     for number in phone_book:
-#         number_stack = []  # 순서가 거꾸로 된 stack
-#         tmp = int(number)
-#         while tmp > 0:
-#             number_stack.append((tmp % 10))
-#             tmp //= 10
-#
-#         # 접두사인지 체크
-#         for other_number in phone_book:
-#             if other_number == number:
+#     length = len(phone_book)
+#     for i in range(length):
+#         for j in range(length):
+#             if i == j:
 #                 continue
-#             for i in range(0, len(str(other_number))):
-#                 a = number_stack[len(number_stack) - i - 1]
-#                 if int(str(other_number)[i]) != a:
-#                     break
-#             else:
+#             if phone_book[i].startswith(phone_book[j]):
 #                 return False
 #     return True
 
-#### 내 답안 2
+
+
+# 모범 답안 : 해시 사용
 def solution(phone_book):
-    for A in phone_book:
-        for B in phone_book:
-            if A == B:
-                continue
-            if B.startswith(A):
+    # 해시 맵 생성
+    hash_map = {}
+    for phone_number in phone_book:
+        hash_map[phone_number] = 1
+
+    for phone_number in phone_book:
+        temp = ""
+        for number in phone_number:
+            temp += number
+            if temp in hash_map and temp != phone_number:
                 return False
     return True
 
 
-print(solution(["123", "456", '789']))
 
-#### 모범답안
-# def solution(phoneBook):
-#     phoneBook = sorted(phoneBook)
-#
-#     for p1, p2 in zip(phoneBook, phoneBook[1:]):
-#         if p2.startswith(p1): # startswith 함수로 체크
-#             return False
-#     return True
+print(solution(	["12", "123", "1235", "567", "88"]))
