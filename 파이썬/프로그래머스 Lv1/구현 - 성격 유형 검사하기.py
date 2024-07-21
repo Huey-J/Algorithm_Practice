@@ -15,6 +15,9 @@ def solution(survey, choices):
     answer += 'M' if score_list['J'] < score_list['M'] else 'J'
     answer += 'N' if score_list['A'] < score_list['N'] else 'A'
 
+    a = []
+    a.insert('s')
+
     return answer
 
 
